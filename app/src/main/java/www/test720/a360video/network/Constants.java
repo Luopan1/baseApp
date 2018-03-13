@@ -5,6 +5,5 @@ package www.test720.a360video.network;
  */
 
 public class Constants {
-//    <a href="http://www.yse123.com" target="_self" class="l logo"><img src="/css/logo.gif" alt="360影视"></a>
-    public static String httpHost = "http://www.yse123.com/";
+    public static String httpHost = "http://www.baidu.com";
 }
