@@ -24,8 +24,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import www.test720.a360video.R;
 
 
@@ -42,7 +40,6 @@ public abstract class BaseFragment extends Fragment {
     private Object fragment;
     private Dialog mLoadingDialog;
     private SparseArray<View> mViews;
-    Unbinder unbinder;
 
     //初始化控件
     protected abstract void initView();
@@ -77,7 +74,6 @@ public abstract class BaseFragment extends Fragment {
         mViews = new SparseArray<>();
         rootView = inflater.inflate(setLayoutResID(), container, false);
         mContext = getActivity();
-        unbinder = ButterKnife.bind(this, rootView);
 
         initView();
         initData();
@@ -226,9 +222,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (unbinder != null) {
-            unbinder.unbind();
-        }
+
     }
 
     /**
